@@ -26,7 +26,7 @@ if(typeof document!=='undefined'){
   const article=node('article',undefined,'profile'),intro=node('div',undefined,'profile-intro'),body=node('div',undefined,'profile-body'),top=node('div',undefined,'profile-top');
   top.append(node('span',type.code,'code'),node('span',`${counts[type.id]} OF ${data.questions.length} CHOICES`,'eyebrow'));intro.append(top,node('h3',type.name),node('p',type.summary,'summary'));
   const tags=node('div',undefined,'tags');type.values.forEach(v=>tags.append(node('span',v)));intro.append(tags,node('p',type.reading_challenge,'reading-challenge'));
-  [['In your club',type.in_group],['What this approach can offer',type.strength],['A trade-off to consider',type.tradeoff]].forEach(([h,p])=>body.append(node('h4',h),node('p',p)));
+  [['In a group',type.in_group],['What this approach can offer',type.strength],['A trade-off to consider',type.tradeoff]].forEach(([h,p])=>body.append(node('h4',h),node('p',p)));
   const q=node('div',undefined,'question-to-keep');q.append(node('h4','A question to carry with you'),node('p',type.question));body.append(q);article.append(intro,body);return article;
  }
  function showResults(){
